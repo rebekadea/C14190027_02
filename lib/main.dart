@@ -7,109 +7,325 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      title: "Test 1 - C14190027",
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text("Test 1 - C14190027"),
+          ),
+          body: Container(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  const Padding(
+                      padding: EdgeInsets.only(
+                          bottom: 20), //apply padding to some sides only
+                      child: Text("Popular Courses : ",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18.0))),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [Icon(Icons.calendar_month), Text("Science")],
+                      ),
+                      Column(
+                        children: [Icon(Icons.coffee), Text("Cooking")],
+                      ),
+                      Column(
+                        children: [Icon(Icons.settings), Text("Math")],
+                      ),
+                      Column(
+                        children: const [
+                          Icon(Icons.motorcycle),
+                          Text("Biology")
+                        ],
+                      ),
+                      Column(
+                        children: [Icon(Icons.stars), Text("Design")],
+                      )
+                    ],
+                  )
+                ]),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 10, top: 20),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                            child: Text("Continue Learning : ",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18.0))),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                            margin: EdgeInsets.only(right: 10),
+                            padding: EdgeInsets.all(12),
+                            color: Color.fromRGBO(200, 230, 201, 1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                    padding: EdgeInsets.only(bottom: 10),
+                                    child: Icon(Icons.calendar_month)),
+                                Text("Science",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 13.0)),
+                                Text("Chapter 4",
+                                    style: TextStyle(fontSize: 13.0)),
+                                Padding(
+                                    padding: EdgeInsets.only(top: 10),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.alarm, size: 15),
+                                        Text("27 Mins",
+                                            style: TextStyle(fontSize: 13.0))
+                                      ],
+                                    ))
+                              ],
+                            )),
+                        Container(
+                            margin: EdgeInsets.only(right: 10),
+                            padding: EdgeInsets.all(12),
+                            color: Color.fromRGBO(200, 230, 201, 1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                    padding: EdgeInsets.only(bottom: 10),
+                                    child: Icon(Icons.stars)),
+                                Text("Design",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                                Text("Chapter 5"),
+                                Padding(
+                                    padding: EdgeInsets.only(top: 10),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.alarm, size: 15),
+                                        Text("30 Mins",
+                                            style: TextStyle(fontSize: 13.0))
+                                      ],
+                                    ))
+                              ],
+                            )),
+                        Container(
+                            margin: EdgeInsets.only(right: 10),
+                            padding: const EdgeInsets.all(12),
+                            color: Color.fromRGBO(200, 230, 201, 1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Padding(
+                                    padding: EdgeInsets.only(bottom: 10),
+                                    child: Icon(Icons.motorcycle)),
+                                const Text("Biology",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                                const Text("Chapter 1"),
+                                Padding(
+                                    padding: EdgeInsets.only(top: 10),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.alarm, size: 15),
+                                        Text("25 Mins",
+                                            style: TextStyle(fontSize: 13.0))
+                                      ],
+                                    ))
+                              ],
+                            )),
+                        Container(
+                            margin: EdgeInsets.only(right: 10),
+                            padding: EdgeInsets.all(12),
+                            color: Color.fromRGBO(200, 230, 201, 1),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                    padding: EdgeInsets.only(bottom: 10),
+                                    child: Icon(Icons.coffee)),
+                                Text("Cooking",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                                Text("Chapter 3"),
+                                Padding(
+                                    padding: EdgeInsets.only(top: 10),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.alarm, size: 15),
+                                        Text("18 Mins",
+                                            style: TextStyle(fontSize: 13.0))
+                                      ],
+                                    ))
+                              ],
+                            ))
+                      ],
+                    )
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 10, top: 20),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                            child: Text("Last Seen Courses : ",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18.0))),
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(bottom: 10),
+                          padding: EdgeInsets.all(12),
+                          color: Color.fromRGBO(225, 190, 231, 1),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Padding(
+                                        padding: EdgeInsets.only(right: 10),
+                                        child: Icon(Icons.task)),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Basics of Designing",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18.0)),
+                                        Text("1 hour, 25 mins")
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                Icon(Icons.play_arrow_rounded)
+                              ]),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(bottom: 10),
+                          padding: EdgeInsets.all(12),
+                          color: Color.fromRGBO(225, 190, 231, 1),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Padding(
+                                        padding: EdgeInsets.only(right: 10),
+                                        child: Icon(Icons.book)),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Human Respiratory System",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18.0)),
+                                        Text("4 hour, 10 mins")
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                Icon(Icons.play_arrow_rounded)
+                              ]),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(bottom: 10),
+                          padding: EdgeInsets.all(12),
+                          color: Color.fromRGBO(225, 190, 231, 1),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Padding(
+                                        padding: EdgeInsets.only(right: 10),
+                                        child:
+                                            Icon(Icons.bookmark_added_rounded)),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Integration & Differentiation",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18.0)),
+                                        Text("2 hour, 37 mins")
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                Icon(Icons.play_arrow_rounded)
+                              ]),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.home,
+                          color: Colors.blue,
+                        ),
+                        Text("Home", style: TextStyle(color: Colors.blue))
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.menu_book,
+                          color: Colors.grey[400],
+                        ),
+                        Text("Explore",
+                            style: TextStyle(color: Colors.grey[400]))
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.chat,
+                          color: Colors.grey[400],
+                        ),
+                        Text("Chat", style: TextStyle(color: Colors.grey[400]))
+                      ],
+                    )
+                  ],
+                )
+              ],
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+          )),
     );
   }
 }
